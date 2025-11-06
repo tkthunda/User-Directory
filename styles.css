@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background-color: rgb(189, 189, 206);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+h2{
+    margin-bottom: 20px;
+    color: rgb(165, 128, 54);
+    font-size: 2rem; 
+    text-align: center;
+}
+
+#filterInput{
+    padding:10px 20px;
+    width: 250px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#filterInput:focus{
+    box-shadow: 0 0 15px rgba(256,256,256,.5);
+    border-color: darkblue;
+}
+
+button{
+    padding:20px;
+    background-color: darkorchid;
+    border: 2px;
+    border-radius: 50px;
+    color: white;
+    font-size: 15px;
+    margin: 15px;
+    transition: all 0.2s ease;
+}
+
+button:hover{
+    background-color: rebeccapurple;
+}
+
+#sortAsc, #sortDesc{
+    background-color: darkorange;
+}
+
+#sortAsc:hover, #sortDesc:hover{
+    background-color: orangered;
+}
+
+#userList{
+    list-style: none;
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    padding: 20px
+}
+
+#userList li{
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5e7eb;
+    transition: background-color 0.2s ease;
+}
+
+#userList li:last-child{
+    border-bottom: none;
+}
+
+#userList li:hover{
+    background-color: #f3f4f6;
+}
+
+#userList strong{
+    color: darkblue;
+    font-size: 1.1rem;
+}
+
+#userList small{
+    display: block;
+    color: #333;
+    margin-top: 3px;
+}
+
+.controls input, .controls button{
+    flex: 0 0 auto;
+}
