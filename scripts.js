@@ -41,4 +41,24 @@ const filtered=users.filter(u=>u.name.toLowerCase().includes(keyword));
 renderUsers(filtered)
 })
 
-//sort functionality
+//sort functionality (A-Z)
+//when clicked we want to display the user in ascending order (alpha)
+//use addEventListner() to add function to sortAsc button
+document.getElementById("sortAsc").addEventListener("click", () =>{
+    //we use spread operator to creat a shallow copy  of the user array
+    //This will ensure that the original users array is not modified
+    //we use .sort() to sort the users array in alphabetical ordr
+    //localeCompare() handles the sorting base on the suers names in case sensitive
+    const sorted = [...users].sort((a,b) => a.name.localeCompare(b.name));
+    
+    renderUsers(sorted);
+})
+
+//sort fucntion (Z-A)
+//when clicked we want to display the user in descending alpha order
+document.getElementById("sortDesc").addEventListener("click", () =>{
+    //use the spread operator to create a shallow copy of the users array
+    //then use .sort() with localeCompare()
+    const sorted = [...users].sort((a,b)=>b.name.localeCompare(a.name));
+    renderUsers(sorted);
+})
